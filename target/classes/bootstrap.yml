@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+  rabbitmq:
+    host: 47.101.197.240
+    port: 5672
+    password: guest
+    username: guest
+  redis:
+    host: 47.101.197.240
+    port: 6379
+    password: Allure123
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.101.197.240:8761/eureka
+#关闭安全认证
+management:
+  #refresh接入点显式暴露出来
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+ #防止服务超时,此处设置为20秒，时长自定义
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+        timeout:
+          enabled: false
+zuul:
+  max:
+    host:
+      connections: 500
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
