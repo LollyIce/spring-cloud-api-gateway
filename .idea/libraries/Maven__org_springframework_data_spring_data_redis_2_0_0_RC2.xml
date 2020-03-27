@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.data:spring-data-redis:2.0.0.RC2">
+    <CLASSES>
+      <root url="jar://E:/开发环境/maven/apache-maven-3.6.1/repository/org/springframework/data/spring-data-redis/2.0.0.RC2/spring-data-redis-2.0.0.RC2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/开发环境/maven/apache-maven-3.6.1/repository/org/springframework/data/spring-data-redis/2.0.0.RC2/spring-data-redis-2.0.0.RC2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/开发环境/maven/apache-maven-3.6.1/repository/org/springframework/data/spring-data-redis/2.0.0.RC2/spring-data-redis-2.0.0.RC2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

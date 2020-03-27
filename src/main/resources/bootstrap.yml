@@ -1,3 +1,5 @@
+server:
+  port: 8085
 spring:
   application:
     name: api-gateway
@@ -18,8 +20,18 @@ spring:
     password: Allure123
 eureka:
   client:
-    service-url:
+    serviceUrl:
       defaultZone: http://47.101.197.240:8761/eureka
+    registry-fetch-interval-seconds: 5
+    instance-info-replication-interval-seconds: 10
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}  #固定端口
+    lease-renewal-interval-in-seconds: 10  #每隔几秒告诉eureka服务器我还存活，用于心跳检测
+    lease-expiration-duration-in-seconds: 10 #如果心跳检测一直没有发送，10秒后会从eureka服务器中将此服务剔除
+    status-page-url: http://${spring.cloud.client.ip-address}:${server.port}/doc.html #固定端口
+    ip-address: 47.101.197.240
+    non-secure-port: 8085
 #关闭安全认证
 management:
   #refresh接入点显式暴露出来

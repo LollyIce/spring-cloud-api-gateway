@@ -2,7 +2,6 @@ package com.apigateway.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
-import com.sun.xml.internal.ws.client.ResponseContext;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletResponse;
